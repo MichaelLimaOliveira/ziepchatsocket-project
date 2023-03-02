@@ -1,3 +1,4 @@
+import "reflect-metadata";
 import express, { Request, Response } from "express";
 import path from "path";
 import { createServer } from "http";
@@ -8,7 +9,7 @@ const app = express();
 
 const server = createServer(app);
 
-mongoose.connect("mongodb://localhost/ziepchatdb");
+mongoose.connect("mongodb://127.0.0.1:27017/ziepchatdb")
 
 app.use(express.static(path.join(__dirname, "..", "public")));
 

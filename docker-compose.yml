@@ -6,6 +6,7 @@ services:
   mongo:
     image: mongo
     restart: always
+    port: 2701:2701
     environment:
       MONGO_INITDB_ROOT_USERNAME: root
       MONGO_INITDB_ROOT_PASSWORD: supermasterkey01

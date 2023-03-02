@@ -16,8 +16,10 @@ const ChatRoomSchema = new Schema({
   ],
   idChatRoom: {
     type: String,
-    default: uuidV4(),
+    default: uuidV4,
   }
 });
 
 const ChatRoom = mongoose.model<ChatRoom>("ChatRoom", ChatRoomSchema);
+
+export { ChatRoom };
